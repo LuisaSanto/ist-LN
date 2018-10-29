@@ -1,0 +1,31 @@
+Unigrams: 1653 | Bigrams: 3931
+----------
+Sentence: Quando fores à praia, lembra-te do filtro solar.
+Suggested lemma: 'ir'
+- Probability with lemma 'ir': 3.6296495156259606e-49
+- Probability with lemma 'ser': 2.1873300748535305e-51
+- Probability with lemma 'n-é-verbo': 1.13323143025879e-54
+----------
+Sentence: Se fores um advogado, sê honesto.
+Suggested lemma: 'ser'
+- Probability with lemma 'ir': 2.5989424379413433e-40
+- Probability with lemma 'ser': 4.844374116878565e-38
+- Probability with lemma 'n-é-verbo': 2.149968538267429e-43
+----------
+Sentence: Quando fores mãe, vais fazer todos os 'nuncas' que disseste que nunca ias fazer.
+Suggested lemma: 'ser'
+- Probability with lemma 'ir': 2.209437896754603e-67
+- Probability with lemma 'ser': 8.422245269858034e-66
+- Probability with lemma 'n-é-verbo': 1.2717981495564639e-70
+----------
+Sentence: Se fores tentado, não deves ceder, resiste ao pecado, até o vencer.
+Suggested lemma: 'ser'
+- Probability with lemma 'ir': 6.642756903935539e-71
+- Probability with lemma 'ser': 9.22391415238669e-71
+- Probability with lemma 'n-é-verbo': 5.495198051528898e-74
+----------
+Sentence: Para onde fores, irei também, trilhando as mesmas ruas...
+Suggested lemma: 'ir'
+- Probability with lemma 'ir': 1.0517111481489388e-35
+- Probability with lemma 'ser': 4.603522620136419e-40
+- Probability with lemma 'n-é-verbo': 1.341766608521857e-41

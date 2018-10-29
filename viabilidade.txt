@@ -1,0 +1,13 @@
+Grupo 12 | Ruben Anagua, 78050 | Ana Luisa Santo, 79758
+
+Em 10 frases de teste, o programa sugeriu o lema correto para 9, o que parece ser um resultado globalmente positivo.
+
+As expectativas iniciais eram significativamente mais baixas, devido ao tamanho reduzido dos corpora e devido à simplicidade da estratégia de alisamento utilizada (variante de Laplace). Para além do tamanho reduzido do corpora, o corpus relativo à palavra ambígua "entrava" foi maioritariamente marcado com o lema "entrar", existindo demasiado poucas entradas com o lema "entravar". Deste modo, foram obtidos poucos bigramas com o lema "entravar", o que pode justificar a predição errada do lema relativo a uma das palavras ambíguas.
+
+É, também, necessário ter em consideração o tamanho muito reduzido do conjunto de frases de teste, pelo que os resultados aferidos a partir deste conjunto particular podem não responder à realidade.
+
+De qualquer das formas, embora com grande margem para melhorias, conclui-se que sistemas destes são definitivamente viáveis. Mesmo sem qualquer preocupação com o desempenho do programa, obtivemos sugestões de lemas quase instantâneas, com 90% de exatidão. Algumas das seguintes melhorias poderiam vir a ser efetuadas:
+- Consideração da classe morfossintática dos vocábulos;
+- Aplicação de algumas tarefas de pré-processamento, como stemming e lowercasing;
+- Aumento significativo do tamanho dos corpora de desenvolvimento.
+

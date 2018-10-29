@@ -1,0 +1,31 @@
+Unigrams: 5955 | Bigrams: 16008
+----------
+Sentence: Ele entrava então no peristilo do hotel central.
+Suggested lemma: 'entrar'
+- Probability with lemma 'entrar': 1.685112109728668e-54
+- Probability with lemma 'entravar': 7.170714698393596e-60
+- Probability with lemma 'n-é-verbo': 7.170714698393596e-60
+----------
+Sentence: A elevada taxa de juro entrava o crescimento económico.
+Suggested lemma: 'entravar'
+- Probability with lemma 'entrar': 1.814263505227939e-61
+- Probability with lemma 'entravar': 1.1324641040935919e-60
+- Probability with lemma 'n-é-verbo': 4.2752320842373066e-64
+----------
+Sentence: Eu entrava em casa pela janela quando minha mãe me deixava sem chave.
+Suggested lemma: 'entrar'
+- Probability with lemma 'entrar': 4.686988628837699e-62
+- Probability with lemma 'entravar': 3.253956141727752e-66
+- Probability with lemma 'n-é-verbo': 3.6824838034227906e-69
+----------
+Sentence: O homem entrava a roda.
+Suggested lemma: 'entrar'
+- Probability with lemma 'entrar': 3.128359952990556e-38
+- Probability with lemma 'entravar': 8.729509917008119e-41
+- Probability with lemma 'n-é-verbo': 1.6480759241793924e-44
+----------
+Sentence: Era a primeira vez que o André entrava numa prova e ainda por cima completaria 16 anos no derradeiro dia de prova, um domingo.
+Suggested lemma: 'entrar'
+- Probability with lemma 'entrar': 5.037721385227451e-96
+- Probability with lemma 'entravar': 1.423868151758806e-98
+- Probability with lemma 'n-é-verbo': 1.423868151758806e-98

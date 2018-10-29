@@ -1,0 +1,18 @@
+Grupo 12 | Ruben Anagua, 78050 | Ana Luisa Santo, 79758
+
+Relativamente à anotação dos corpora de desenvolvimento, recorremos à opção de "erro na frase", quando era impossível determinar qual o verbo a que a palavra a desambiguar diz respeito devido a problemas com a estrutura da frase, ou quando nenhuma palavra a desambiguar estava presente.
+
+O contexto de algumas frases contendo palavras a desambiguar não foi suficiente para determinar, com certeza, que apenas um dos lemas era possível, pelo que nestes casos, colocámos a opção correspondente a "dúvidas".
+
+O lema "n-é-verbo" só foi utilizado para casos específicos do termo "fores" em que se pretendia ter escrito "flores", pelo que todos estes casos foram também assinalados como erros e ignorados pelo passo seguinte.
+
+Os ficheiros .out foram obtidos após processamento do corpora pelo anotador fornecido. Para converter tais ficheiros para ficheiros .final, foi desenvolvido um script, out_to_final.py, que recebe como argumentos a palavra a desambiguar e o ficheiro .out, e aplica várias operações, de modo a suprimir determinadas linhas e escrever um ficheiro com as frases que vão ser divididas em n-gramas.
+
+Para obtenção dos unigramas e bigramas, e respetivas probabilidades (respeitando o formato ARPA), foi utilizada a ferramenta SRILM, disponível para download em http://www.speech.sri.com/projects/srilm/download.html . Após download deste kit, o conteúdo foi extraído, o Makefile foi modificado para apontar a variável $SRILM (linha 7) para o caminho de instalação correto, e o comando `$ make World` foi executado. De seguida, como descrito no script run.sh, a subferramenta "ngram-count" foi utilizada, escrevendo os ficheiros com unigramas e bigramas no formato ARPA.
+
+Os ficheiros utilizados para a fase seguinte, entrava.arpa e fores.arpa, não estão alisados pois o script 2.py tratará de aplicar tal alisamento. No entanto, é possível obter os unigramas e bigramas alisados via execução do run.sh, sendo estes escritos para os ficheiros entravaAlisado.arpa e foresAlisado.arpa. A técnica de alisamento para este último caso é a de Laplace, com alpha = 0.1, ou seja, adicionamos 0.1 à frequência absoluta de cada n-grama, antes dos cálculos probabilísticos.
+
+A tarefa 2 é realizada pelo programa 2.py, que recebe três ficheiros: unigramas e bigramas em formato ARPA, parametrização, e frases de teste, separadas por linhas. Para cada frase de teste, é criado um novo dicionário de bigramas temporário, e adicionamos os bigramas obtidos a partir da frase de teste a este dicionário, cada um com probabilidade 0. De seguida, é efetuada uma variação do alisamento de Laplace (pois dispomos de probabilidades e não de frequências absolutas), com alpha = 0.1. Desta forma, a probabilidade de um bigrama apenas presente na frase de teste é um décimo da menor probabilidade encontrada no dicionário de bigramas. Tal como no alisamento de Laplace, estes valores de probabilidade são depois normalizados -- o somatório das probabilidades dos bigramas antes e depois do alisamento é aproximadamente igual.
+
+De seguida, a palavra a desambiguar é substituída por cada um dos lemas e é calculada a probabilidade da frase segundo a regra da probabilidade em cadeia considerando bigramas. O lema sugerido será o que originar a maior probabilidade, e no caso de existirem vários lemas com probabilidade máxima, é sugerido o mais comum, ou seja, o que tiver maior probabilidade de ocorrer, segundo o dicionário de unigramas.
+
